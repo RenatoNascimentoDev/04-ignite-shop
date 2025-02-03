@@ -9,6 +9,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@stitches/react": "^1.2.8",
     "@types/react-dom": "^19.0.3",
     "next": "^13.1.6",
     "react": "^18.3.1",

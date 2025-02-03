@@ -1,4 +1,5 @@
 import { Html, Head, Main, NextScript } from "next/document";
+import { getCssText } from "../styles";
 
 export default function Document() {
   return (
@@ -11,8 +12,12 @@ export default function Document() {
           crossOrigin="anonymous"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
           rel="stylesheet"
+        />
+        <style
+          id="stitches"
+          dangerouslySetInnerHTML={{ __html: getCssText() }}
         />
       </Head>
       <body>
