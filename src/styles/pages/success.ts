@@ -19,7 +19,7 @@ export const SuccessContainer = styled("main", {
     maxWidth: 560,
     textAlign: "center",
     marginTop: "2rem",
-    lineHeight: 1.4,
+    fontWeight: "1.4rem",
   },
 
   a: {
@@ -27,8 +27,6 @@ export const SuccessContainer = styled("main", {
     marginTop: "5rem",
     fontSize: "$lg",
     color: "$green500",
-    textDecoration: "none",
-    fontWeight: "bold",
 
     "&:hover": {
       color: "$green300",
