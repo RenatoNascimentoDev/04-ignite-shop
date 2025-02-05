@@ -24,7 +24,7 @@ export default function Success({ costumerName, product }: SuccessProps) {
 
       <p>
         Uhuul <strong>{costumerName}</strong>, sua{" "}
-        <strong>{product.name}</strong> já está a caminho da sua casas.
+        <strong>{product.name}</strong> já está a caminho da sua casa.
       </p>
 
       <Link href="/">Voltar ao catálogo</Link>
@@ -33,6 +33,15 @@ export default function Success({ costumerName, product }: SuccessProps) {
 }
 
 export const getServerSideProps: GetServerSideProps = async ({ query }) => {
+  if (!query.session_id) {
+    return {
+      redirect: {
+        destination: "/",
+        permanent: false,
+      },
+    };
+  }
+
   const sessionId = String(query.session_id);
 
   const session = await stripe.checkout.sessions.retrieve(sessionId, {
